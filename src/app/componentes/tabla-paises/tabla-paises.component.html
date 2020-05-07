@@ -10,7 +10,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor = "let pais of listadoPaises">
+      <tr *ngFor = "let pais of listadoPaises" (click)="verDetalle(pais)">
         <th scope="row">{{pais.id}}</th>
         <td>{{pais.nombre}}</td>
         <td>{{pais.capital}}</td>

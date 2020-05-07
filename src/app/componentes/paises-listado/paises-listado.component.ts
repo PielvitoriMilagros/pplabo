@@ -11,6 +11,7 @@ export class PaisesListadoComponent implements OnInit {
 
 
   public paises: Pais[] = [];
+  detallePaisActual:Pais;
 
 
    constructor(private peliculasService: PaisesService) {
@@ -27,5 +28,11 @@ export class PaisesListadoComponent implements OnInit {
     
   ngOnInit(): void {
   }
+
+
+  recibirDetallePais(e){
+    this.detallePaisActual = e;
+  }
+
 
 }

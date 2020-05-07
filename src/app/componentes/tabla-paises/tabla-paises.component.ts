@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Pais } from '../../clases/pais';
 
 @Component({
@@ -9,10 +9,15 @@ import { Pais } from '../../clases/pais';
 export class TablaPaisesComponent implements OnInit {
 
   @Input() listadoPaises: Pais[];
+  @Output() detallePais : EventEmitter<Pais> = new EventEmitter<Pais>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  verDetalle(pais){
+    this.detallePais.emit(pais);
   }
 
 }
