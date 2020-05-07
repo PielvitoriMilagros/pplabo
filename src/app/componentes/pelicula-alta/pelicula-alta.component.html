@@ -1,0 +1,69 @@
+<app-cabecera></app-cabecera>
+
+
+
+
+<main class="login-form">
+    <div class="cotainer">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header" style="text-align: center;">
+              <div class="col-xs-11 h3">Alta de películas</div>
+            </div>
+            <div class="card-body">
+              <form action="" name="alta" method="">
+
+                <div class="form-group row">
+                  <label for="nombre" class="col-md-4 col-form-label text-md-right">Título:</label>
+                  <div class="col-md-6">
+                    <input type="text" id="nombre" [(ngModel)]="peliculaNueva.nombre" class="form-control"
+                      name="titulo" style="width:50%"/>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="tipo" class="col-md-4 col-form-label text-md-right">Tipo:</label>
+                  <div class="col-md-6">
+                    <input type="text" id="tipo" [(ngModel)]="peliculaNueva.tipo" class="form-control"
+                      name="tipo" style="width:50%"/>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="fecha" class="col-md-4 col-form-label text-md-right">Año:</label>
+                  <div class="col-md-6">
+                    <input type="text" id="fecha" [(ngModel)]="peliculaNueva.fecha" class="form-control"
+                      name="fecha" style="width:50%"/>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="publico" class="col-md-4 col-form-label text-md-right">Expectadores:</label>
+                  <div class="col-md-6">
+                    <input type="text" id="publico" [(ngModel)]="peliculaNueva.cantidadPublico" class="form-control"
+                      name="publico" style="width:50%"/>
+                  </div>
+                </div>
+
+                <app-tabla-actor (actorSeleccionado)="recibirActorSeleccionado($event)"  [actores]="this.actores"></app-tabla-actor>
+
+
+                <div class="form-group row">
+                    <!-- <label for="respuesta" class="col-md-4 col-form-label text-md-right">Respuesta:</label> -->
+                    <div class="col-md-6 offset-md-4">
+                      <h2><button (click)="agregarPelicula()" class="btn btn-success btn-lg">Agregar Película</button></h2>
+
+                    </div>
+                  </div>
+
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+

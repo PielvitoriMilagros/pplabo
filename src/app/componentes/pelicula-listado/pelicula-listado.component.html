@@ -1,0 +1,5 @@
+<app-cabecera></app-cabecera>
+
+<app-tabla-peliculas [peliculas]=this.peliculas (detallePelicula)="recibirDetallePelicula($event)"></app-tabla-peliculas>
+
+<app-detalle-pelicula [peliculaDetalle]="this.detallePeliculaActual" (borrarPelicula)="recibirBorrarPelicula($event)"></app-detalle-pelicula>

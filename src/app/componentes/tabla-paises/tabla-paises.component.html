@@ -1,0 +1,21 @@
+<h2>Paises</h2>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">País</th>
+        <th scope="col">Capital</th>
+        <th scope="col">Población</th>
+        <th scope="col">Bandera</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let pais of listadoPaises">
+        <th scope="row">{{pais.id}}</th>
+        <td>{{pais.nombre}}</td>
+        <td>{{pais.capital}}</td>
+        <td>{{pais.poblacion}}</td>
+        <td><img height=70px width="120px" [src] = "pais.bandera" alt=""></td>
+      </tr>
+    </tbody>
+  </table>

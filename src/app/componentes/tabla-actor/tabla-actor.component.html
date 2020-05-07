@@ -1,0 +1,24 @@
+<h2>Actores</h2>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Sexo</th>
+        <th scope="col">Nacimiento</th>
+        <th scope="col">Foto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let actor of actores" (click)=seleccionarActor(actor)>
+        <th scope="row">{{actor.id}}</th>
+        <td>{{actor.nombre}}</td>
+        <td>{{actor.apellido}}</td>
+        <td>{{actor.sexo}}</td>
+        <td>{{actor.fechaNacimiento}}</td>
+        <td><img height=80px width="60px" [src] = "actor.foto" alt=""></td>
+        <!-- <td><button (click)="verDetalle(pelicula)" class="btn btn-outline-warning">Detalle</button></td> -->
+      </tr>
+    </tbody>
+  </table>

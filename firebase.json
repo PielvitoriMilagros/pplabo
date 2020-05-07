@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/practicaPrimerParcial",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
