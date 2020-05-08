@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Pais } from '../../clases/pais';
 import { PaisesService } from '../../servicios/paises.service';
+import { Actor } from 'src/app/clases/actor';
+import { MisActoresService } from 'src/app/servicios/mis-actores.service';
 
 @Component({
   selector: 'app-actor-alta',
@@ -10,9 +12,13 @@ import { PaisesService } from '../../servicios/paises.service';
 export class ActorAltaComponent implements OnInit {
 
   public paises: Pais[] = [];
+  actores:Actor[];
+  actorNuevo:Actor;
 
 
-   constructor(private peliculasService: PaisesService) {
+   constructor(private peliculasService: PaisesService, private misActores:MisActoresService) {
+
+    this.actores = misActores.obtenerActores();
 
      this.peliculasService.obtenerPaises().subscribe( (resp:any)=>{
        resp.forEach(element => {
@@ -25,6 +31,20 @@ export class ActorAltaComponent implements OnInit {
     }
 
   ngOnInit(): void {
+
+    this.actorNuevo=new Actor();
+
   }
+
+  recibirPaisSeleccionado(paisSeleccionado){
+    this.actorNuevo.paisDeOrigen=paisSeleccionado.nombre;
+  }
+
+
+  agregarActor(){
+    this.misActores.altaActor(this.actorNuevo);
+  }
+
+
 
 }

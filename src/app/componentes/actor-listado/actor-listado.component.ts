@@ -10,12 +10,17 @@ import { Actor } from 'src/app/clases/actor';
 export class ActorListadoComponent implements OnInit {
 
   actores:Actor[];
+  detalleActorActual:Actor;
 
   constructor(private misActores:MisActoresService) { 
     this.actores=misActores.obtenerActores();
   }
 
   ngOnInit(): void {
+  }
+
+  recibirDetalleActor(e){
+    this.detalleActorActual = e;
   }
 
 }

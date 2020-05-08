@@ -18,6 +18,7 @@ import { TablaActorComponent } from './componentes/tabla-actor/tabla-actor.compo
 import { PaisesListadoComponent } from './componentes/paises-listado/paises-listado.component';
 import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
 import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.component';
+import { DetalleActorComponent } from './componentes/detalle-actor/detalle-actor.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.co
     TablaActorComponent,
     PaisesListadoComponent,
     TablaPaisesComponent,
-    DetallePaisComponent
+    DetallePaisComponent,
+    DetalleActorComponent
   ],
   imports: [
     HttpClientModule,

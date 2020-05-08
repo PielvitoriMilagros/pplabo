@@ -28,6 +28,20 @@ export class MisActoresService {
    }
 
 
+   
+   altaActor(actorNuevo){
+
+    let ultimoActor=this.actores[this.actores.length-1];
+    let ultimoId = ultimoActor.id;
+
+    actorNuevo.id=ultimoId+1;
+    this.actores.push(actorNuevo);
+
+    localStorage.setItem('actores',JSON.stringify(this.actores));
+
+   }
+
+
 
 
 

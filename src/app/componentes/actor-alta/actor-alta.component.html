@@ -1,4 +1,71 @@
 <app-cabecera></app-cabecera>
 
 
-<app-tabla-paises [listadoPaises]="this.paises"></app-tabla-paises>
+<main class="login-form">
+    <div class="cotainer">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header" style="text-align: center;">
+              <div class="col-xs-11 h3">Alta de actores</div>
+            </div>
+            <div class="card-body">
+              <form action="" name="alta" method="">
+
+                <div class="form-group row">
+                  <label for="nombre" class="col-md-4 col-form-label text-md-right">Nombre:</label>
+                  <div class="col-md-6">
+                    <input type="text" id="nombre" [(ngModel)]="actorNuevo.nombre" class="form-control"
+                      name="titulo" style="width:50%"/>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="apellido" class="col-md-4 col-form-label text-md-right">Apellido:</label>
+                  <div class="col-md-6">
+                    <input type="text" id="apellido" [(ngModel)]="actorNuevo.apellido" class="form-control"
+                      name="apellido" style="width:50%"/>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="sexo" class="col-md-4 col-form-label text-md-right">Sexo:</label>
+                  <div class="col-md-6">
+                    <input type="text" id="sexo" [(ngModel)]="actorNuevo.sexo" class="form-control"
+                      name="sexo" style="width:50%"/>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="nacimiento" class="col-md-4 col-form-label text-md-right">Nacimiento:</label>
+                  <div class="col-md-6">
+                    <input type="text" id="nacimiento" [(ngModel)]="actorNuevo.fechaNacimiento" class="form-control"
+                      name="nacimiento" style="width:50%"/>
+                  </div>
+                </div>
+
+
+ 
+                <app-tabla-paises (detallePais)="recibirPaisSeleccionado($event)" [listadoPaises]="this.paises"></app-tabla-paises>
+
+                
+
+                <div class="form-group row">
+                    <!-- <label for="respuesta" class="col-md-4 col-form-label text-md-right">Respuesta:</label> -->
+                    <div class="col-md-6 offset-md-4">
+                      <h2><button (click)="agregarActor()" class="btn btn-success btn-lg">Agregar Actor</button></h2>
+
+                    </div>
+                  </div>
+
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+
+
+<!-- <app-tabla-paises [listadoPaises]="this.paises"></app-tabla-paises> -->

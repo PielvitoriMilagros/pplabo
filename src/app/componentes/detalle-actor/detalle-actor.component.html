@@ -1,0 +1,15 @@
+<div *ngIf="actorDetalle" class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img height=250px width="180px" [src]="actorDetalle.foto" alt="">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{actorDetalle.id}} - {{actorDetalle.apellido}}</h5>
+                <p class="card-text">Género: {{actorDetalle.nombre}}</p>
+                <p class="card-text">Público: {{actorDetalle.fechaNacimiento}}</p>
+                <p class="card-text">Año: {{actorDetalle.paisDeOrigen}}</p>
+            </div>
+        </div>
+    </div>
+</div>
