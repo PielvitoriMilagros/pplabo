@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Pais } from 'src/app/clases/pais';
 
 @Component({
@@ -9,10 +9,15 @@ import { Pais } from 'src/app/clases/pais';
 export class DetallePaisComponent implements OnInit {
 
   @Input() paisDetalle : Pais;
+  @Output() deshabilitarPais : EventEmitter<Pais> = new EventEmitter<Pais>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  eliminarPais(){
+    this.deshabilitarPais.emit(this.paisDetalle);
   }
 
 }

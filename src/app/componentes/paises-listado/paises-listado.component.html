@@ -6,4 +6,4 @@
 <app-tabla-paises [listadoPaises]="this.paises" (detallePais)="recibirDetallePais($event)"></app-tabla-paises>
 
 
-<app-detalle-pais [paisDetalle]="this.detallePaisActual"></app-detalle-pais>
+<app-detalle-pais [paisDetalle]="this.detallePaisActual" (deshabilitarPais)="deshabilitarPaisActual($event)"></app-detalle-pais>

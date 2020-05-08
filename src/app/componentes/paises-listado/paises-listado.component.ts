@@ -34,5 +34,21 @@ export class PaisesListadoComponent implements OnInit {
     this.detallePaisActual = e;
   }
 
+  deshabilitarPaisActual(e){
+
+
+    let indexAEliminar = -1;
+    for (let index = 0; index < this.paises.length; index++) {
+      if (this.paises[index].id == e.id) {
+        indexAEliminar = index;
+      }
+
+    }
+    if (indexAEliminar != -1) {
+      this.paises.splice(indexAEliminar, 1);
+    }
+
+  }
+
 
 }
