@@ -14,6 +14,7 @@ export class ActorAltaComponent implements OnInit {
   public paises: Pais[] = [];
   actores:Actor[];
   actorNuevo:Actor;
+  detallePaisActual:Pais;
 
 
    constructor(private peliculasService: PaisesService, private misActores:MisActoresService) {
@@ -38,6 +39,7 @@ export class ActorAltaComponent implements OnInit {
 
   recibirPaisSeleccionado(paisSeleccionado){
     this.actorNuevo.paisDeOrigen=paisSeleccionado.nombre;
+    this.detallePaisActual=paisSeleccionado;
   }
 
 

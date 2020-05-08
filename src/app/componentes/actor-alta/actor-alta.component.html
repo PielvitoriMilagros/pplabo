@@ -44,8 +44,7 @@
 
  
                 <app-tabla-paises (detallePais)="recibirPaisSeleccionado($event)" [listadoPaises]="this.paises"></app-tabla-paises>
-
-                
+                <app-detalle-pais [paisDetalle]="this.detallePaisActual"></app-detalle-pais>
 
                 <div class="form-group row">
                     <!-- <label for="respuesta" class="col-md-4 col-form-label text-md-right">Respuesta:</label> -->
